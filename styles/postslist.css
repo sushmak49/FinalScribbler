@@ -73,3 +73,28 @@ body{
 .trash-icon{
     color: #686868;
 }
+
+.deleteModal{
+    position: absolute;
+    top: 200px;
+    width: 24% !important;
+}
+
+.btn-yes-no{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-yes{
+    background-color: green;
+    color: white;
+    border: none;
+    width: 60px;
+}
+
+.btn-no{
+    background-color: red;
+    color: white;
+    border: none;
+    width: 60px;
+}
