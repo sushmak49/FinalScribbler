@@ -12,11 +12,47 @@ body{
 
 
 .post-card{
+    font-family: sans-serif;
     width: 40%;
     background-color: white;
     margin: 20px 40px;
     order: 2;
     color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.post-author{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    color: #696969
+}
+
+.post-author-container{
+    height: 100%;
     padding: 10px;
-    border-radius: 5px;
+}
+
+.post-content-container{
+    background-color: lavender;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.post-content{
+    text-overflow:clip;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3; /* number of lines to show */
+}
+
+.post-title{
+    font-weight: bold;
+    color: #A9A9A9;
 }
