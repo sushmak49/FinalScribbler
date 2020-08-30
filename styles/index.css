@@ -1,0 +1,28 @@
+body{
+    background-image: url("../images/background.jpg");
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+}
+
+.posts-container{
+    position: fixed;
+    top: 50%;
+    left: 40%;
+}
+
+.btn-posts{
+    background-color: #e6b800!important;
+    color: black !important;
+    width: 120px;
+    margin: 8px;
+}
+
+.btn-create-post{
+    text-align: center !important;
+    width: 10% !important;
+    left: 45%;
+}
+
+textarea{
+    height: 200px !important;
+}
