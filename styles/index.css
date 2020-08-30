@@ -1,0 +1,23 @@
+body{
+    background-image: url("../images/background.jpg");
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+}
+
+.btn-submit{
+    margin: 20px 0;
+}
+
+.modal-box{
+    font-family: 'Roboto', sans-serif;
+}
+
+.label-text{
+    font-weight: bold;
+}
+
+.bottom-banner{
+    text-align: center;
+    font-weight: bold;
+}
+
