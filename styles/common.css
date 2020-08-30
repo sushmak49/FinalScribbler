@@ -1,0 +1,21 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading{
+    font-family: 'Montez', cursive; 
+    color: blue
+}
+
+.sub-heading{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.header-btn{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    margin: 10px;
+}
