@@ -19,3 +19,31 @@
     text-align: center;
     margin: 10px;
 }
+
+.btn-submit{
+    margin: 20px 0;
+}
+
+.modal-box{
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-title{
+    font-weight: bolder !important;
+}
+
+.label-text{
+    font-weight: bold;
+}
+
+.bottom-banner{
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-field{
+    background-color: #EEECFF !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-weight: bolder !important;
+}
