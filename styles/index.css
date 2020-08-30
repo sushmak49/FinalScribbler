@@ -4,20 +4,25 @@ body{
     background-repeat: no-repeat;
 }
 
-.btn-submit{
-    margin: 20px 0;
+.posts-container{
+    position: fixed;
+    top: 50%;
+    left: 40%;
 }
 
-.modal-box{
-    font-family: 'Roboto', sans-serif;
+.btn-posts{
+    background-color: #e6b800!important;
+    color: black !important;
+    width: 120px;
+    margin: 8px;
 }
 
-.label-text{
-    font-weight: bold;
+.btn-create-post{
+    text-align: center !important;
+    width: 10% !important;
+    left: 45%;
 }
 
-.bottom-banner{
-    text-align: center;
-    font-weight: bold;
+textarea{
+    height: 200px !important;
 }
-
