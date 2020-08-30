@@ -54,5 +54,22 @@ body{
 
 .post-title{
     font-weight: bold;
-    color: #A9A9A9;
+    color: #686868;
+    width: 90%;
+}
+
+.post-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ellipsis-icon{
+    float: right;
+    margin-right: 2px ;
+    color: #686868;
+}
+
+.trash-icon{
+    color: #686868;
 }
