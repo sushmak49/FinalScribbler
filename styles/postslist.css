@@ -76,6 +76,10 @@ body{
     color: #686868;
 }
 
+.ellipsis-icon:hover{
+    cursor: pointer;
+}
+
 .trash-icon{
     color: #686868;
 }
