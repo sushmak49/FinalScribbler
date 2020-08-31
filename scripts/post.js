@@ -11,7 +11,7 @@ function displayLikes(){
     var showCountDiv = document.getElementById("showCount");
     var likeButton = document.getElementById("likeButton");
 
-    likeButton.innerHTML = "Liked";
+    likeButton1.innerHTML = "<i class="+"fa fa-thumbs-up"+"></i><span id="+"likeButton"+">Liked</span>";
 
     if(counterForLikes == 1) {
         showCountDiv.innerHTML= counterForLikes +" person likes this !";
@@ -22,27 +22,27 @@ function displayLikes(){
 
 }
 
+//function to edit and save content
 function updateContentAndHeader(){
     
     counter = counter + 1;
 
-    //Edit is allowed only once for post
     if(!editableMode){
 
-        document.getElementById("heading").style.borderWidth = "1px";
+        document.getElementById("heading").style.borderWidth = "2px";
         document.getElementById("heading").style.borderStyle = "solid";
-        document.getElementById("heading").style.borderColor = "red";
+        document.getElementById("heading").style.borderColor = "pink";
 
-        document.getElementById("content").style.borderWidth = "1px";
+        document.getElementById("content").style.borderWidth = "2px";
         document.getElementById("content").style.borderStyle = "solid";
-        document.getElementById("content").style.borderColor = "red";
+        document.getElementById("content").style.borderColor = "pink";
 
         
         document.getElementById("editButton").innerHTML = 'Save<i class="fa fa-save" style="padding-left: 4px;"></i></button>';
         editableMode = true;
         
     }   else {
-    
+        
             if(counter === 2){
                 var headingDiv =  document.getElementById("heading");
                 document.getElementById("heading").innerHTML = "<span>UPDATED:</span>" + headingDiv.innerHTML;
@@ -57,15 +57,11 @@ function updateContentAndHeader(){
             document.getElementById("heading").style.border = "none";
 
             document.getElementById("editButton").innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i>';
-            document.getElementById("editButton").disabled = true;
-        
     }
-
-   
 }
 
 var comments = [];
-
+//functuin to add comments to comments list
 function addComment(comment) {
 
     if(comment.value !== '') {
@@ -81,6 +77,7 @@ function addComment(comment) {
     }
 }
 
+//function to display comments in the right order
 function displayComments(item, index) {
     var commentsDiv = document.getElementById("comments").innerHTML;
     document.getElementById("comments").innerHTML = '<div class="comment">'+item+'</div>' + '</br>';
@@ -88,7 +85,7 @@ function displayComments(item, index) {
     comments.pop();
 }
 
-//On page load, this function gets called
+//Function called on page load to display the post
 window.onload = function () {
     if (pathString.length == 0) {
 
@@ -115,7 +112,5 @@ window.onload = function () {
         document.getElementsByClassName("author-name")[0].innerHTML = author;
         document.getElementsByClassName("post-content")[0].innerHTML = content;
     }
-
     document.getElementById('comments').style.visibility = 'hidden';
-
 };
