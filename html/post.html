@@ -9,7 +9,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!-- Local stylesheet reference-->
     <link rel="stylesheet" type="text/css" href="../styles/common.css">
-    <link rel="stylesheet" type="text/css" href="../styles/postslist.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/post.css" />
     
     <!--link to Bootstrap minified CSS and JS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -97,7 +97,20 @@
         </div>
     </div>
 
-    <script src="../scripts/postslist.js"></script>
+    <!--Code to create post-->
+    <div class="post container">
+        <div class="heading-content" id="heading" contenteditable="true">Post heading</div>
+        <div class="author">
+            <div class="author-name">Author name</div>
+            <div>
+                <button id="editButton" type="button" class="btn btn-danger" onclick="updateContentAndHeader()">Edit
+                    <i class="fa fa-edit"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="../scripts/post.js"></script>
 </body>
 
 </html>
