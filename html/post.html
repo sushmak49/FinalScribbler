@@ -7,6 +7,8 @@
    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
     <!-- Local stylesheet reference-->
     <link rel="stylesheet" type="text/css" href="../styles/common.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../styles/post.css" />
@@ -97,8 +99,8 @@
         </div>
     </div>
 
-    <!--Code to create post-->
-    <div class="post container">
+    <!--Code to edit and comment on a post-->
+    <div class="container post">
         <div class="heading-content" id="heading" contenteditable="true">Post heading</div>
         <div class="author">
             <div class="author-name">Author name</div>
@@ -108,30 +110,31 @@
                 </button>
             </div>
         </div>
-
+        
+        <!--Post content-->
         <div class="post-content" id="content" contenteditable="true">
             dummy text here in the post-content div
         </div>
 
         <button id="likeButton" type="button" class="btn btn-danger" onclick="displayLikes()"><i
-            class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+            class="fa fa-thumbs-up"></i><span id="likeButton1">Like</span></button>
         
         <div id="showCount">Be the first one to like this</div>
-
+        
+        <!--Comments textarea-->
         <textarea id="comment" rows="4" cols="150" placeholder="Leave a comment..." name="comment"></textarea>
         <div>
             <button id="comment-btn" type="button" class="btn btn-danger"
                 onclick="addComment(comment)">Comment
             </button>
         </div>
+
+        <!--Comments list-->
         <div id="allCommentsHeading">All Comments</div>
         <div class="comment-container">
             <div id="comments">
             </div>
         </div>
-
-
-
     </div>
     <script src="../scripts/post.js"></script>
 </body>
