@@ -4,6 +4,16 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+#postbody {
+    background-color: white;
+}
+
+.post-content{
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+
 .heading-content{
     text-align: center;
     font-size: 30px;
@@ -41,3 +51,30 @@ body{
     margin-top: 20px;
 }
 
+#comment-btn{
+    margin-top: 20px;
+}
+
+#comments{
+    margin: 5px;
+    padding: 5px;
+    background-color: lightgrey;
+}
+
+.comment{
+    width: 1000px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+#allCommentsHeading{
+    font-weight: bolder;
+    padding-top: 10px;
+}
+
+.comment-container{
+    min-height: 0px;
+    overflow: hidden;
+  
+}
