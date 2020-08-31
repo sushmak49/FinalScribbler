@@ -3,14 +3,18 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!--link to local stylesheets-->
-    <link rel="stylesheet" type="text/css" href="./styles/common.css">
-    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+   <!-- TODO: Include Google Fonts file here -->
+   <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <!-- Local stylesheet reference-->
+    <link rel="stylesheet" type="text/css" href="../styles/common.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/post.css" />
+    
     <!--link to Bootstrap minified CSS and JS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -18,7 +22,7 @@
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
+    <!--header section-->
     <header id="header" class="col">
         <div>
             <h1 class="heading">ScriBBler</h1>
@@ -29,12 +33,6 @@
             <button type="button" class="btn btn-primary header-btn" data-toggle="modal" data-target="#signInModal">Sign In</button>
         </div>     
     </header>
-
-    <!--Create Post and All Posts button-->
-    <div class="posts-container">
-        <button type="button" class="btn btn-primary btn-posts" onclick="listAllPosts();">All Posts</button>
-        <button type="button" class="btn btn-primary btn-posts" data-toggle="modal" data-target="#createPostModal">Create Post</button>
-    </div>
 
     <!--Sign Up modal dialog-->
     <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -101,33 +99,44 @@
         </div>
     </div>
 
-    <!--Create A Post modal dialog-->
-    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-box modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Pen Your Post!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post">
-                        <div class="form-group">
-                            <label for="title" class="label-text">Title</label>
-                            <input type="text" class="form-control input-field" name="title" placeholder="Enter title of your post" required="true">  
-                        </div>
-                        <div class="form-group">
-                            <label for="contents" class="col-form-label">Contents</label>
-                            <textarea class="form-control input-field" id="contents" placeholder="Enter the contents of your post"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-success col btn-create-post">Create</button>
-                    </form>
-                </div>
+    <!--Code to edit and comment on a post-->
+    <div class="container post">
+        <div class="heading-content" id="heading" contenteditable="true">Post heading</div>
+        <div class="author">
+            <div class="author-name">Author name</div>
+            <div>
+                <button id="editButton" type="button" class="btn btn-danger" onclick="updateContentAndHeader()">Edit
+                    <i class="fa fa-edit"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!--Post content-->
+        <div class="post-content" id="content" contenteditable="true">
+            dummy text here in the post-content div
+        </div>
+
+        <button id="likeButton" type="button" class="btn btn-danger" onclick="displayLikes()"><i
+            class="fa fa-thumbs-up"></i><span id="likeButton1">Like</span></button>
+        
+        <div id="showCount">Be the first one to like this</div>
+        
+        <!--Comments textarea-->
+        <textarea id="comment" rows="4" cols="150" placeholder="Leave a comment..." name="comment"></textarea>
+        <div>
+            <button id="comment-btn" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment
+            </button>
+        </div>
+
+        <!--Comments list-->
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
             </div>
         </div>
     </div>
-<script src="./scripts/index.js"></script>
+    <script src="../scripts/post.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+//function called on click of No in delete post modal
 function onClose(e){
     document.getElementById('deletePostModal').style.display ='none';
     if (!e)
@@ -13,12 +14,14 @@ function onClose(e){
     }
 }
 
+//Function to display delete modal
 function showDeleteDialog(postID) {
     console.log(postID);
     document.getElementById('deletePostModal').style.display='block'; 
     document.getElementById('btn-y').setAttribute('onclick',"deletePost("+postID+")");  
 }
 
+//Function to delete a post card
 function deletePost(postID) {
         console.log(postID);
         console.log("inside delete");
@@ -36,4 +39,12 @@ function deletePost(postID) {
             });
         document.getElementById('deletePostModal').style.display='none';
            
+}
+
+//Function to construct url to re-direct to post.html page
+function showPost(author, heading, content) {
+	var url = "../html/post.html?heading=" + encodeURIComponent(heading.innerText) + "&author=" +
+	 encodeURIComponent(author.innerText) + "&content=" +encodeURIComponent(content.innerText);
+  
+  location.href = url; 
 }
