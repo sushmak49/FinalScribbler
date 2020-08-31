@@ -23,6 +23,10 @@ body{
     flex-direction: row;
 }
 
+.post-card:hover{
+    box-shadow: 0 0  5px 5px rgba(33,33,33,.2);
+}
+
 .post-author{
     height: 100%;
     display: flex;
@@ -45,11 +49,13 @@ body{
 }
 
 .post-content{
-    text-overflow:clip;
     overflow: hidden;
+    white-space: normal; 
     display: -webkit-box;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 3; /* number of lines to show */
+   text-overflow: clip;
+
 }
 
 .post-title{
