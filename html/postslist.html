@@ -105,19 +105,19 @@
         <!-- post 1 starts here -->
         <div class="post-card" id="postCard1">
             <div class="post-author-container">
-                <p class="post-author">Srishti Gupta</p>
+                <p class="post-author" id="author1">Srishti Gupta</p>
             </div>
 
             <div class="post-content-container"> 
                 <div class="post-title-container">
-                    <p class="post-title">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                    <p class="post-title" id="heading1">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
                     <span class="trash-icon">
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash" onclick="showDeleteDialog('postCard1');"></i>
                     </span>
                 </div>
-                <p class="post-content">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
-                <span class="ellipsis-icon">
+                <p class="post-content" id="content1">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                <span class="ellipsis-icon" onclick="showPost(author1, heading1, content1)">
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -128,19 +128,19 @@
         <!-- post 2 starts here -->
         <div class="post-card" id="postCard2">
             <div class="post-author-container">
-                <p class="post-author">Colby Fayock</p>
+                <p class="post-author" id="author2">Colby Fayock</p>
             </div>
 
             <div class="post-content-container">
                 <div class="post-title-container">
-                    <p class="post-title">What is linting and how can it save you time?</p>
+                    <p class="post-title" id="heading2">What is linting and how can it save you time?</p>
                     <span class="trash-icon">
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash" onclick="showDeleteDialog('postCard2');"></i>
                     </span>
                 </div>
-                <p class="post-content">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                <span class="ellipsis-icon">
+                <p class="post-content" id="content2">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <span class="ellipsis-icon" onclick="showPost(author2, heading2, content2)">
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -151,19 +151,19 @@
         <!-- post 3 starts here -->
         <div class="post-card" id="postcard3">
             <div class="post-author-container">
-                <p class="post-author">Yazeed Bzadough</p>
+                <p class="post-author" id="author3">Yazeed Bzadough</p>
             </div>
 
             <div class="post-content-container">
                 <div class="post-title-container">
-                    <p class="post-title">How to Get More Views on Your Tech Blog</p>
+                    <p class="post-title" id="heading3">How to Get More Views on Your Tech Blog</p>
                     <span class="trash-icon">
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash" onclick="showDeleteDialog('postcard3');"></i>
                     </span>
                 </div>
-                <p class="post-content">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
-                <span class="ellipsis-icon">
+                <p class="post-content" id="content3">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                <span class="ellipsis-icon" onclick="showPost(author3, heading3, content3)">
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -174,20 +174,20 @@
         <!-- post 4 starts here -->
         <div class="post-card" id="postCard4">
             <div class="post-author-container">
-                <p class="post-author">Cedd Burge</p>
+                <p class="post-author" id="author4">Cedd Burge</p>
             </div>
 
             <div class="post-content-container">
                 <div class="post-title-container">
-                    <p class="post-title">How to write easily describable code</p>
+                    <p class="post-title" id="heading4">How to write easily describable code</p>
                     <span class="trash-icon">
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash" onclick="showDeleteDialog('postCard4');"></i>
                     </span>
                 </div>
-                <p class="post-content">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                <p class="post-content" id="content4">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
                     leads to confusion when discussing the code.</p>
-                <span class="ellipsis-icon">
+                <span class="ellipsis-icon" onclick="showPost(author4, heading4, content4)">
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
@@ -198,20 +198,20 @@
         <!-- post 5 starts here -->
         <div class="post-card" id="postCard5">
             <div class="post-author-container">
-                <p class="post-author">Srishti Gupta</p>
+                <p class="post-author" id="author5">Srishti Gupta</p>
             </div>
 
             <div class="post-content-container">
                 <div class="post-title-container">
-                    <p class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <p class="post-title" id="heading5">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                     <span class="trash-icon">
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash" onclick="showDeleteDialog('postCard5');"></i>
                     </span>
                 </div>
-                <p class="post-content">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                <p class="post-content" id="content5">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
                     named xyz.</p>
-                <span class="ellipsis-icon">
+                <span class="ellipsis-icon" onclick="showPost(author5, heading5, content5)">
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                     <i class="fa fa-ellipsis-h"></i>
                 </span>
